@@ -4,13 +4,14 @@ import os
 class DriverSetup:
     @staticmethod
     def get_driver():
-        # Define desired capabilities for iOS
+        # Define desired capabilities for Android
         desired_caps = {
-            'platformName': 'iOS',
-            'platformVersion': '14.4',  # Adjust as needed
-            'deviceName': 'iPhone 11',  # Adjust as needed
-            'automationName': 'XCUITest',
-            'app': os.environ.get('APP_PATH'),  # APP_PATH is an environment variable
+            'platformName': 'Android',
+            'platformVersion': '11',
+            'deviceName': 'Pixel 6 Pro',  # Adjust as needed
+            'automationName': 'uiautomator2',
+            'app': os.environ.get('APP_PATH'),  # Ensure APP_PATH points to your .apk file
+            'avd': 'Pixel_6_Pro'  # Only needed if using an emulator
             # Additional capabilities as needed
         }
 
